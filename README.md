@@ -14,6 +14,6 @@ Hello! I'm [Emir AKSU](), and here's a little about me.
 [Github](https://github.com/senihergordugumde/noteor)
 
 ### Contact
-- **LinkedIn:** [Your LinkedIn](https://www.linkedin.com/in/emir-aksu-118b5421b/)
-- **GitHub:** [Your GitHub](https://github.com/senihergordugumde)
+- **LinkedIn:** [My LinkedIn](https://www.linkedin.com/in/emir-aksu-118b5421b/)
+- **GitHub:** [My GitHub](https://github.com/senihergordugumde)
 - **Email:** emiraksu1608@gmail.com
