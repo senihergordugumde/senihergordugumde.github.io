@@ -1,5 +1,6 @@
 
-# Welcome to My Page
+# Welcome to My Page   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/814px-Apple_logo_black.svg.png" alt="Apple Logo" width="100" height="100">
+
 
 ## About Me
 Hello! I'm [Emir AKSU](), and here's a little about me.
