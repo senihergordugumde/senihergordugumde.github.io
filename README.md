@@ -2,7 +2,7 @@
 # Welcome to My Page
 
 ## About Me
-Hello! I'm [Your Name](https://www.linkedin.com/in/your-linkedin-id/), and here's a little about me.
+Hello! I'm [Emir AKSU](), and here's a little about me.
 
 ### Projects
 - **Project 1:** Description and [Link to project](#)
