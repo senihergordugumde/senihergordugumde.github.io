@@ -3,7 +3,7 @@
 </div>
 
 # Welcome to My Page  
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/814px-Apple_logo_black.svg.png" alt="Apple Logo" width="100" height="100">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/814px-Apple_logo_black.svg.png" alt="Apple Logo" class="animate-logo" width="100" height="100">
 
 ---
 
@@ -58,14 +58,17 @@ style.innerHTML = `
     .dark-mode {
         background-color: #121212; 
         color: white; 
+        transition: background-color 0.3s, color 0.3s;
     }
 
     .dark-mode img {
         filter: brightness(0.8);
+        transition: filter 0.3s;
     }
 
     .dark-mode a {
         color: #BB86FC;
+        transition: color 0.3s;
     }
 
     .dark-mode button {
@@ -75,6 +78,20 @@ style.innerHTML = `
         padding: 0.5em;
         cursor: pointer;
         border-radius: 5px;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .animate-logo {
+        animation: bounce 2s infinite alternate;
+    }
+
+    @keyframes bounce {
+        from {
+            transform: translateY(0);
+        }
+        to {
+            transform: translateY(-10px);
+        }
     }
 `;
 document.head.appendChild(style);
