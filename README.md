@@ -1,4 +1,4 @@
-<div align="center">
+<div align="right">
     <button id="darkModeButton" onclick="toggleDarkMode()">🌗</button>
 </div>
 
