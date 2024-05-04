@@ -1,6 +1,8 @@
-
 # Welcome to My Page   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/814px-Apple_logo_black.svg.png" alt="Apple Logo" width="100" height="100">
 
+<div align="center">
+    <button id="darkModeButton" onclick="toggleDarkMode()">🌗</button>
+</div>
 
 ## About Me
 Hello! I'm [Emir AKSU](), and here's a little about me.
@@ -19,3 +21,16 @@ Hello! I'm [Emir AKSU](), and here's a little about me.
 - **LinkedIn:** [My LinkedIn](https://www.linkedin.com/in/emir-aksu-118b5421b/)
 - **GitHub:** [My GitHub](https://github.com/senihergordugumde)
 - **Email:** emiraksu1608@gmail.com
+
+<script>
+function toggleDarkMode() {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+}
+
+// Add dark-mode class to style
+var style = document.createElement('style');
+style.type = 'text/css';
+style.innerHTML = '.dark-mode { background-color: #121212; color: white; }';
+document.getElementsByTagName('head')[0].appendChild(style);
+</script>
