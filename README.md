@@ -1,265 +1,345 @@
+<!--
+  Hello!
+  -
+  Simplefolio is a clean and responsive portfolio template for Developers!
+  Created by Jacobo Martinez.
+  -
+  Github Repo: https://github.com/cobiwave/simplefolio/
+  Readme: https://github.com/cobiwave/simplefolio/README.md
+  -
+  For business & inquires, contact me -> jacobojavier98@gmail.com
+-->
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Emir AKSU's professional portfolio showcasing iOS development projects, including Baraj24 and Noteor.">
-    <meta name="keywords" content="Emir AKSU, iOS Developer, Baraj24, Noteor, portfolio, projects">
-    <meta name="author" content="Emir AKSU">
-    <title>Emir AKSU - iOS Developer</title>
-    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/814px-Apple_logo_black.svg.png" type="image/png">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <style>
-        body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            transition: background-color 0.5s ease, color 0.5s ease;
-        }
+<html lang="en" class="sr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/png" href="assets/favicon.png" />
 
-        .dark-mode {
-            background-color: #121212;
-            color: white;
-        }
+    <!-- Todo: put here your site title -->
+    <title>[Your name here] | Developer</title>
+    <!-- Todo: add some coding keywords below - e.g: (javascript, yourusername, etc) -->
+    <meta name="keywords" content="[username], [name], skill" />
+    <!-- Todo: improve your SEO by adding a small description of you -->
+    <meta name="description" content="[Your name here] | Developer" />
 
-        .dark-mode img {
-            filter: brightness(0.8);
-        }   
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="styles.scss" />
+    <script
+      defer
+      src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"
+    ></script>
 
-        a{
-            color : #F9546C;
-        }
-        .dark-mode a {
-            color: #F9546C;
-        }
+    <!-- Todo: remove the below script once you finish your portfolio -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+  </head>
 
-        .dark-mode button {
-            background-color: #BB86FC;
-            color: #121212;
-            border: none;
-            padding: 0.5em;
-            cursor: pointer;
-            border-radius: 5px;
-        }
+  <!-- Todo: read the following HTML Todos to create your stunning portfolio website -->
+  <body>
+    <div id="top"></div>
 
-        #darkModeButton {
-            position: fixed;
-            top: 10px;
-            right: 10px;
-            background-color: #f8f9fa;
-            color: #343a40;
-            border: none;
-            padding: 5px 10px;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: background-color 0.5s ease, color 0.5s ease;
-        }
+    <!-- **** Hero Section **** -->
+    <section id="hero" class="jumbotron">
+      <div class="container">
+        <h1 class="hero-title load-hidden">
+          Hi, my name is <span class="text-color-main">Your Name</span>
+          <br />
+          I'm the Unknown Developer.
+        </h1>
+        <p class="hero-cta load-hidden">
+          <a rel="noreferrer" class="cta-btn cta-btn--hero" href="#about"
+            >Know more</a
+          >
+        </p>
+      </div>
+    </section>
+    <!-- /END Hero Section -->
 
-        .dark-mode #darkModeButton {
-            background-color: #BB86FC;
-            color: white;
-        }
+    <!-- **** About Section **** -->
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title load-hidden">About me</h2>
+        <div class="row about-wrapper">
+          <div class="col-md-6 col-sm-12">
+            <div class="about-wrapper__image load-hidden">
+              <img
+                alt="Profile Image"
+                class="img-fluid rounded shadow-lg"
+                height="auto"
+                width="300px"
+                src="assets/profile.jpg"
+                alt="Profile Image"
+              />
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-12">
+            <div class="about-wrapper__info load-hidden">
+              <p class="about-wrapper__info-text">
+                This is where you can describe about yourself. The more you
+                describe about yourself, the more chances you have!
+              </p>
+              <p class="about-wrapper__info-text">
+                Extra Information about you! like hobbies and your goals.
+              </p>
+              <span class="d-flex mt-3">
+                <a
+                  rel="noreferrer"
+                  target="_blank"
+                  class="cta-btn cta-btn--resume"
+                  href="assets/resume.pdf"
+                >
+                  View Resume
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /END About Section -->
 
-        .content {
-            max-width: 800px;
-            margin: 50px auto;
-        }
+    <!-- **** Projects Section **** -->
+    <section id="projects">
+      <div class="container">
+        <div class="project-wrapper">
+          <h2 class="section-title dark-blue-text">Projects</h2>
 
-        .carousel img {
-            width: 100%; /* Full width of the carousel */
-            height: 400px; /* Fixed height for all images */
-            object-fit:contain; /* Cover the container without distorting the aspect ratio */
-            object-position: center; /* Center the image within the container */
-        }
-        
-        .btn-social {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 8px;
-            padding: 0.5em 1em;
-            border-radius: 5px;
-            color: #ffffff;
-        }
+          <!-- Notice: each .row is a project -->
+          <div class="row">
+            <div class="col-lg-4 col-sm-12">
+              <div class="project-wrapper__text load-hidden">
+                <h3 class="project-wrapper__text-title">Project Title 0</h3>
+                <div>
+                  <p class="mb-4">
+                    Describe the project being very specific, you can use the Twitter standard: no more than 280 characters: 
+                    complement the information: the skills learned or reinforced in its realization and how you faced it, 
+                    prove to be proactive in the search for solutions.
+                  </p>
+                </div>
+                <a
+                  rel="noreferrer"
+                  target="_blank"
+                  class="cta-btn cta-btn--hero"
+                  href="#!"
+                >
+                  See Live
+                </a>
+                <a
+                  rel="noreferrer"
+                  target="_blank"
+                  class="cta-btn text-color-main"
+                  href="#!"
+                >
+                  Source Code
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-8 col-sm-12">
+              <div class="project-wrapper__image load-hidden">
+                <a rel="noreferrer" href="#!" target="_blank">
+                  <div
+                    data-tilt
+                    data-tilt-max="4"
+                    data-tilt-glare="true"
+                    data-tilt-max-glare="0.5"
+                    class="thumbnail rounded js-tilt"
+                  >
+                    <img
+                      alt="Project Image"
+                      class="img-fluid"
+                      src="assets/project.jpg"
+                    />
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- /END Project -->
 
-        .btn-linkedin {
-            background-color: #0077B5;
-        }
+          <!-- Notice: each .row is a project -->
+          <div class="row">
+            <div class="col-lg-4 col-sm-12">
+              <div class="project-wrapper__text load-hidden">
+                <h3 class="project-wrapper__text-title">Project Title 1</h3>
+                <div>
+                  <p class="mb-4">
+                    Demonstrate in this description the skills of a programmer: such as having commitment, 
+                    having perseverance and accepting alternative solutions. Remember that being a portfolio you are not selling the project, 
+                    you are selling yourself, it reflects the resources used: Frameworks, libraries, platforms, etc.
+                  </p>
+                </div>
+                <a
+                  rel="noreferrer"
+                  target="_blank"
+                  class="cta-btn cta-btn--hero"
+                  href="#!"
+                >
+                  See Live
+                </a>
+                <a
+                  rel="noreferrer"
+                  target="_blank"
+                  class="cta-btn text-color-main"
+                  href="#!"
+                >
+                  Source Code
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-8 col-sm-12">
+              <div class="project-wrapper__image load-hidden">
+                <a rel="noreferrer" href="#!" target="_blank">
+                  <div
+                    data-tilt
+                    data-tilt-max="4"
+                    data-tilt-glare="true"
+                    data-tilt-max-glare="0.5"
+                    class="thumbnail rounded js-tilt"
+                  >
+                    <img
+                      alt="Project Image"
+                      class="img-fluid"
+                      src="assets/project.jpg"
+                    />
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- /END Project -->
 
-        .btn-github {
-            background-color: #333;
-        }
+          <!-- Notice: each .row is a project -->
+          <div class="row">
+            <div class="col-lg-4 col-sm-12">
+              <div class="project-wrapper__text load-hidden">
+                <h3 class="project-wrapper__text-title">Project Title 2</h3>
+                <div>
+                  <p class="mb-4">
+                    If the project was collaborative, reflect it in this description, that will demonstrate communication and/or leadership skills. 
+                    Additionally, if you made use of the mastery of a second language, it will reflect on you professionalism.
+                  </p>
+                </div>
+                <a
+                  rel="noreferrer"
+                  target="_blank"
+                  class="cta-btn cta-btn--hero"
+                  href="#!"
+                >
+                  See Live
+                </a>
+                <a
+                  rel="noreferrer"
+                  target="_blank"
+                  class="cta-btn text-color-main"
+                  href="#!"
+                >
+                  Source Code
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-8 col-sm-12">
+              <div class="project-wrapper__image load-hidden">
+                <a rel="noreferrer" href="#!" target="_blank">
+                  <div
+                    data-tilt
+                    data-tilt-max="4"
+                    data-tilt-glare="true"
+                    data-tilt-max-glare="0.5"
+                    class="thumbnail rounded js-tilt"
+                  >
+                    <img
+                      alt="Project Image"
+                      class="img-fluid"
+                      src="assets/project.jpg"
+                    />
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- /END Project -->
+        </div>
+      </div>
+    </section>
+    <!-- /END Projects Section -->
 
-        .btn-email {
-            background-color: #D44638;
-        }
+    <!-- **** Contact Section **** -->
+    <section id="contact">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-wrapper load-hidden">
+          <p class="contact-wrapper__text">[Put your call to action here]</p>
+          <a
+            rel="noreferrer"
+            target="_blank"
+            class="cta-btn cta-btn--resume"
+            href="mailto:example@email.com"
+            >Call to Action</a
+          >
+        </div>
+      </div>
+    </section>
+    <!-- /END Contact Section -->
 
-        .project-list-item {
-            padding: 10px 0;
-        }
-
-        .carousel-item .row {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-        }
-
-        .carousel-item img {
-            max-width: 48%;
-            object-fit:contain;
-          
-        }
-
-        .carousel-control-prev-icon,
-        .carousel-control-next-icon {
-            background-color: #F9546C; /* Change the color here */
-            border-radius: 50%;
-            padding: 10px;
-        }
-
-    </style>
-</head>
-<body>
-
-<div class="container">
-    <button id="darkModeButton" onclick="toggleDarkMode()">🌗</button>
-
-    <div class="content">
-        <div class="text-center">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/814px-Apple_logo_black.svg.png" alt="Apple Logo" width="100" height="100">
+    <!-- **** Footer Section **** -->
+    <footer class="footer navbar-static-bottom">
+      <div class="container">
+        <a rel="noreferrer" href="#top" class="back-to-top">
+          <i class="fa fa-angle-up fa-2x" aria-hidden="true"></i>
+        </a>
+        <div class="social-links">
+          <a rel="noreferrer" href="#!" target="_blank">
+            <i class="fa fa-twitter fa-inverse"></i>
+          </a>
+          <a rel="noreferrer" href="#!" target="_blank">
+            <i class="fa fa-linkedin fa-inverse"></i>
+          </a>
+          <a rel="noreferrer" href="#!" target="_blank">
+            <i class="fa fa-github fa-inverse"></i>
+          </a>
         </div>
 
-        <h1 class="text-center my-4">Emir AKSU</h1>
-        <h2 class="text-center mb-4">iOS Developer</h2>
+        <hr />
 
-        <hr>
+        <!-- Notice: if you want to give me some credit, it will be huge for me! if not, put your data on it -->
+        <p class="footer__text">
+          © 2021 - Template developed by
+          <a rel="noreferrer" href="https://github.com/cobiwave" target="_blank"
+            >Jacobo Martínez</a
+          >
+        </p>
 
-        <section id="about-me">
-            <h2 class="mt-5">About Me</h2>
-            <p>Hello! I'm <a href="#">Emir AKSU</a>, an iOS developer with a passion for creating intuitive and impactful mobile applications.</p>
-        </section>
+        <!-- TO DO: remove this entire paragraph once you finish your portfolio -->
+        <p class="mt-3 pt-3">
+          <a
+            rel="noreferrer"
+            class="github-button"
+            href="https://github.com/cobiwave/simplefolio/fork"
+            data-icon="octicon-repo-forked"
+            data-size="large"
+            data-show-count="true"
+            aria-label="Fork ntkme/github-buttons on GitHub"
+            >Fork</a
+          >
+          <a
+            rel="noreferrer" 
+            class="github-button"
+            href="https://github.com/cobiwave/simplefolio"
+            data-icon="octicon-star"
+            data-size="large"
+            data-show-count="true"
+            aria-label="Star cobiwave/simplefolio on GitHub"
+            >Star</a
+          >
+        </p>
+      </div>
+    </footer>
+    <!-- /END Footer Section -->
 
-        <section id="projects">
-            <h2 class="mt-5">Projects</h2>
-
-            <article class="mt-4">
-                <h3>Baraj24</h3>
-                <ul>
-                    <li class="project-list-item">Developed an iOS application that displays the current and historical daily water levels of dams in Turkey.</li>
-                    <li class="project-list-item">Utilized MVC architecture and managed data with Firebase.</li>
-                    <li class="project-list-item">Created the user interface using Programmatic UI methods.</li>
-                    <li class="project-list-item">Integrated the Charts library to visualize the data with graphs and organized the information using Table View.</li>
-                    <li class="project-list-item">Managed notifications using One Signal Notifications.</li>
-                </ul>
-
-                <div id="baraj24Carousel" class="carousel slide mb-3" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="row">
-                                <img src="/Volumes/CrucialX6/Downloads/pickCity.png" class="d-block" alt="Baraj24 Screenshot 1">
-                                <img src="https://github.com/senihergordugumde/senihergordugumde/blob/main/ASSETS/baraj24/map.png?raw=true" class="d-block" alt="Baraj24 Screenshot 2">
-                            </div>
-                        </div>
-                        <!-- Add more carousel items here as needed -->
-                    </div>
-                    <a class="carousel-control-prev" href="#baraj24Carousel" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#baraj24Carousel" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div>
-
-                <div class="d-flex align-items-center">
-                    <a href="https://apps.apple.com/us/app/barajlar%C4%B1n-doluluk-oranlar%C4%B1/id6466598170" class="btn btn-primary mr-2" target="_blank">
-                        App Store
-                    </a>
-                    <a href="https://github.com/senihergordugumde/baraj24-IOS" class="btn btn-dark" target="_blank">
-                        GitHub
-                    </a>
-                </div>
-            </article>
-
-            <article class="mt-4">
-                <h3>Noteor</h3>
-                <ul>
-                    <li class="project-list-item">Noteor is a comprehensive application that includes features like a To-Do list, calendar, notifications, voice-to-text input, and encryption.</li>
-                    <li class="project-list-item">Developed under the MVC architecture using Firebase as the database.</li>
-                    <li class="project-list-item">Combined Custom UI with Programmatic UI techniques to create a user-friendly interface.</li>
-                    <li class="project-list-item">Integrated AVFoundation for voice-to-text input and used Table View and Collection View to organize content.</li>
-                    <li class="project-list-item">Adopted a clean and modular coding approach and integrated encryption techniques to ensure data security.</li>
-                    <li class="project-list-item">Consistently followed evolving iOS technologies to adhere to best practices.</li>
-                </ul>
-
-                <div id="noteorCarousel" class="carousel slide mb-3" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="row">
-                                <img src="https://github.com/senihergordugumde/senihergordugumde.github.io/blob/main/images/noteor/login.png?raw=true" class="d-block" alt="Noteor Screenshot 1">
-                                <img src="https://github.com/senihergordugumde/senihergordugumde.github.io/blob/main/images/noteor/home.png?raw=true" class="d-block" alt="Noteor Screenshot 2">
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="row">
-                                <img src="https://github.com/senihergordugumde/senihergordugumde.github.io/blob/main/images/noteor/addTask.png?raw=true" class="d-block" alt="Noteor Screenshot 3">
-                                <img src="https://github.com/senihergordugumde/senihergordugumde.github.io/blob/main/images/noteor/notes.png?raw=true" class="d-block" alt="Noteor Screenshot 4">
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="row">
-                                <img src="https://github.com/senihergordugumde/senihergordugumde.github.io/blob/main/images/noteor/profile.png?raw=true" class="d-block" alt="Noteor Screenshot 5">
-                                <img src="https://github.com/senihergordugumde/senihergordugumde.github.io/blob/main/images/noteor/calendar.png?raw=true" class="d-block" alt="Noteor Screenshot 6">
-                            </div>
-                        </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#noteorCarousel" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#noteorCarousel" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div>
-
-                <div class="d-flex align-items-center">
-                    <a href="https://apps.apple.com/tr/app/noteor/id6499096266?l=tr" class="btn btn-primary mr-2" target="_blank">
-                        App Store
-                    </a>
-                    <a href="https://github.com/senihergordugumde/noteor" class="btn btn-dark" target="_blank">
-                        GitHub
-                    </a>
-                </div>
-            </article>
-        </section>
-
-        <section id="contact" class="mt-5">
-            <h2>Contact</h2>
-            <div class="d-flex align-items-center">
-                <a href="https://www.linkedin.com/in/emir-aksu-118b5421b/" class="btn btn-social btn-linkedin mr-2" target="_blank">
-                    <i class="fab fa-linkedin"></i> LinkedIn
-                </a>
-                <a href="https://github.com/senihergordugumde" class="btn btn-social btn-github mr-2" target="_blank">
-                    <i class="fab fa-github"></i> GitHub
-                </a>
-                <a href="mailto:emiraksu1608@gmail.com" class="btn btn-social btn-email" target="_blank">
-                    <i class="fas fa-envelope"></i> Email
-                </a>
-            </div>
-        </section>
-    </div>
-</div>
-
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
-<script>
-    function toggleDarkMode() {
-        document.body.classList.toggle("dark-mode");
-    }
-</script>
-
-</body>
+    <script defer type="module" src="index.js"></script>
+  </body>
 </html>
